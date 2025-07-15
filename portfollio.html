@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Venkata Vijaya Reddy | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #1e1e2f;
+      color: #fff;
+      padding: 1.2rem 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      opacity: 0.85;
+      min-height: 24px;
+    }
+
+    #toggleTheme {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      padding: 0.4rem 0.8rem;
+      background: #fff;
+      color: #1e1e2f;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ccff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 100px;
+      min-height: 60vh;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+      color: #111;
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      display: inline-block;
+      background: #007BFF;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: #007BFF;
+      box-shadow: 0 0 5px rgba(0,123,255,0.5);
+      transition: 0.3s ease;
+    }
+
+    form button {
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background: #1e1e2f;
+      color: #fff;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1001;
+    }
+
+    /* Dark Mode Styles */
+    body.dark {
+      background: #1a1a1a;
+      color: #e6e6e6;
+    }
+
+    body.dark header,
+    body.dark footer {
+      background: #111;
+      color: #fff;
+    }
+
+    body.dark .card {
+      background: #2c2c2c;
+      color: #f5f5f5;
+    }
+
+    @media(max-width: 768px){
+      #about .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #about img {
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Venkata Vijaya Reddy Pulagam</h1>
+  <p></p>
+  <button id="toggleTheme">🌙 Dark</button>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-content" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
+      <img src="sample_project/MyPic - Venkata Vijay Reddy.jpg" alt="Venkata Vijay Reddy" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid #ddd; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <div style="flex: 1; min-width: 250px;">
+        <h2>About Me</h2>
+        <p style="font-size: 1.1rem; line-height: 1.6;">
+          I am <strong>Venkata Vijaya Reddy Pulagam</strong>, a recent graduate and an aspiring Java Developer with a strong foundation in Core Java, JDBC, SQL, and Object-Oriented Programming. I have also gained solid frontend skills including <strong>HTML, CSS, and JavaScript</strong>. I have completed multiple hands-on projects to apply my learning and improve my backend and UI development skills. I’m actively looking for entry-level opportunities where I can contribute to real-world applications and grow as a software professional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">🌐 HTML, CSS, JavaScript</div>
+      <div class="card">☕ Core Java, JDBC, OOP</div>
+      <div class="card">🛢️ ORACLE SQL, MySQL Workbench</div>
+      <div class="card">🔧 Git, GitHub</div>
+      <div class="card">📱 Responsive Design</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <div class="card" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('project1.jpg') no-repeat center center/cover; color: white;">
+        <h3>Employee Leave Management System</h3>
+        <p><strong>Description:</strong> A full-stack leave management app using Java, JDBC, MySQL, HTML, CSS & JS. Employees apply for leave, and admins approve or reject via dashboard.</p>
+        <p><strong>Technologies:</strong> Java, JDBC, MySQL, HTML, CSS, JavaScript</p>
+        <p><em>This project demonstrates my backend development knowledge using Java and JDBC.</em></p>
+      </div>
+
+      <div class="card" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('project2.jpg') no-repeat center center/cover; color: white;">
+        <h3>Portfolio Website</h3>
+        <p><strong>Description:</strong> A responsive portfolio site created using HTML, CSS, and JavaScript to showcase my skills, resume, and projects in a professional layout.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+        <p><em>This website is created to showcase my resume and projects to recruiters.</em></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="card">
+      <h3>Java Full Stack Developer Certification</h3>
+      <p><strong>Institute:</strong> Durga Software Solutions, Hyderabad</p>
+      <p><strong>Accreditation:</strong> ISO 9001:2015 Certified Training Institute</p>
+      <ul>
+        <li>Core Java, OOP, JDBC</li>
+        <li>Frontend: HTML, CSS, JavaScript</li>
+        <li>SQL & MySQL Workbench</li>
+        <li>Mini Projects with practical implementation</li>
+      </ul>
+      <a class="btn" href="course completion certificate.pdf" download>📜 View Certificate</a>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>Click below to download my resume in PDF format:</p>
+    <a class="btn" href="VijayResume.pdf" download>📄 Download Resume</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" value="Venkata Vijaya Reddy Pulagam" readonly />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" value="pvvijayreddy123@gmail.com" readonly />
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" value="+91 79899 13539" readonly />
+
+      <p style="margin-top: 1rem; color: #555;">You can reach me via email or phone. I am open to job opportunities!</p>
+    </form>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2025 Venkata Vijaya Reddy Pulagam. All rights reserved.</p>
+</footer>
+
+<!-- ✅ JavaScript -->
+<script>
+  // Typing subtitle
+  const text = "Fresher | Java Developer | Passionate Coder";
+  let i = 0;
+  const subtitle = document.querySelector("header p");
+
+  function typeEffect() {
+    if (i < text.length) {
+      subtitle.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, 50);
+    }
+  }
+  subtitle.textContent = "";
+  typeEffect();
+
+  // Scroll to top button
+  const scrollBtn = document.createElement("button");
+  scrollBtn.textContent = "↑";
+  scrollBtn.className = "scroll-top";
+  scrollBtn.title = "Scroll to Top";
+  document.body.appendChild(scrollBtn);
+
+  scrollBtn.addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  );
+
+  window.addEventListener("scroll", () => {
+    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  // Dark mode toggle
+  const toggleBtn = document.getElementById("toggleTheme");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️ Light" : "🌙 Dark";
+  });
+</script>
+
+</body>
+</html>
